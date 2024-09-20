@@ -1,10 +1,9 @@
-
 public class TaxCalculation {
     public static void main(String[] args) {
         //Colocamos valores magicos a constantes
-        double TAX_RATE_HIGH = 0.15;
-        double TAX_RATE_LOW = 0.10;
-        int TAX_THRESHOLD = 50;
+        final double TAX_RATE_HIGH = 0.15;
+        final double TAX_RATE_LOW = 0.10;
+        final int TAX_THRESHOLD = 50;
 
         //Almacenamos en un array los precios de los productos y productos
         int[] productPrices = {100,200};

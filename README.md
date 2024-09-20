@@ -55,4 +55,4 @@ You must follow the **SDLC process** to refactor the code:
 5. **Submit Your Work**:
    - Once you complete the refactorization, push your changes to your forked repository.
    - Create a pull request (PR) to the original repository, explaining the improvements you made and how you followed the **SDLC** approach.
-
+6. Profe tire suave en el parcial yo vere
