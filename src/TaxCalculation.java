@@ -1,15 +1,31 @@
+
 public class TaxCalculation {
     public static void main(String[] args) {
-        double productPrice1 = 100;
-        double productPrice2 = 200;
-        double tax1 = productPrice1 * 0.15;
-        double tax2 = productPrice2 * 0.10;
-        double totalTax = tax1 + tax2;
-        
-        if (totalTax > 50) {
-            System.out.println("High total tax: " + totalTax);
+        //Colocamos valores magicos a constantes
+        double TAX_RATE_HIGH = 0.15;
+        double TAX_RATE_LOW = 0.10;
+        int TAX_THRESHOLD = 50;
+
+        //Almacenamos en un array los precios de los productos y productos
+        int[] productPrices = {100,200};
+        double[] taxes = {TAX_RATE_HIGH,TAX_RATE_LOW};
+
+        //un for que vaya encontrando el valor de los impuestos
+        double sum_taxes = 0;
+        for (int i = 0; i < productPrices.length; i++) {
+            double price = productPrices[i];
+            double tax = taxes[i];
+            double totaltaxe = price * (tax);
+            System.out.println("Precio del producto : " + price + ", Impuesto : " + tax + ", Total De impuesto : " + totaltaxe);
+            sum_taxes += totaltaxe;
+        }
+        //Comprobamos si el impuesto es alto o bajo
+        System.out.println("Comprobamos si el impuesto es mayor o menor que 50");
+         if (sum_taxes > TAX_THRESHOLD) {
+            System.out.println("Alto impuesto, el impuesto fue de : " + sum_taxes);
         } else {
-            System.out.println("Low tax");
+            System.out.println("Bajo impuesto, el impuesto fue de : " + sum_taxes);
         }
     }
 }
+
